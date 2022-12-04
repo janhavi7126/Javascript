@@ -1,0 +1,76 @@
+children:-
+const items= document.querySelector('.myclass')
+const l_Items = items.children
+
+parentElement:
+const mylist = document.querySelectorAll('li')
+const firstItem = mylist[0]
+const secondItem = mylist[1]
+console.log(firstItem.parentElement)
+console.log(secondItem.parentElement)
+
+ul
+ul
+
+the firstChild and lastChild property. The node can be of any node type, including text node, comment node, and element node. 
+
+firstElementChild and lastElementChild return the first and last child Element node, and the childNodes returns a live NodeList of all child nodes of any node type of a specified node.
+
+Selecting a specific child:
+const mylist = document.querySelectorAll('li')
+const firstItem = mylist[0]
+const secondItem = mylist[1]
+
+nextElementSibling:-
+const item1 = document.querySelector('li')
+const item2 = item1.nextElementSibling
+
+
+previousElementSibling:-
+const item5 = document.querySelectorAll('li')[1]
+const item6 = item5.previousElementSibling
+
+
+Node Type
+var type = node.nodeType;
+nodeType property is an integer that identifies what the node is. It differentiate between different kind of nodes from each other, such as elements, text and comments. 
+
+console.log('Welcome to tutorial 15');
+
+let cont = document.querySelector('.no');
+cont = document.querySelector('.container');
+let nodeName = cont.childNodes[1].nodeName;
+let nodeType = cont.childNodes[1].nodeType;
+// console.log(nodeName)
+// console.log(nodeType)
+// Node types
+// 1. Element
+// 2. Attribute
+// 3. Text Node
+// 8. Comment
+// 9. document
+// 10. docType
+
+// console.log(cont.childNodes);
+// console.log(cont.children);
+
+let container = document.querySelector('div.container');
+
+// console.log(container.children[1].children[0].children);
+
+// console.log(container.firstChild);
+// console.log(container.firstElementChild);
+
+// console.log(container.lastChild);
+// console.log(container.lastElementChild);
+// console.log(container.children);
+// console.log(container.childElementCount); // Count of child elements
+
+console.log(container.firstElementChild.parentNode);
+console.log(container.firstElementChild.nextSibling);
+console.log(container.firstElementChild.nextElementSibling);
+console.log(container.firstElementChild.nextElementSibling.nextElementSibling);
+
+
+**
+insertBefore(elementToBeInserted, beforewhichwlementName);

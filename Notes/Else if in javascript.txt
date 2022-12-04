@@ -1,0 +1,143 @@
+why else if Not just if
+else if will stop as soon as it meets the condition it will check further
+while if will check all the conditions
+
+a == b	a is equal to b  
+
+a  != b	a is not equal to b
+
+a < b		a is less than b 
+
+a> b		a is greater than b 
+
+a <= b	a is less than or equal to b  
+
+a >= b	a is greater than or equal to b
+
+a===b	a has the same value and same type as b
+
+a !==b	a has same value but not same type
+		or has not same value as well as no same type
+
+
+
+examples
+
+if(me1 == 21){
+    console.log("i am integer 21 or string '21'  '=='")
+}
+if(me1 === 21){
+    console.log(`I am integer 21  '==='`)
+}
+if(me1 != 21){
+    console.log("i am not integer 21 nor string '21' '!=' ")
+}
+if(me1 !== 21){
+    console.log("i am not integer 21  '!=='")
+}
+
+21
+
+i am integer 21 or string '21'  '=='
+I am integer 21  '==='
+
+'21'
+
+i am integer 21 or string '21'  '=='
+i am not integer 21  '!=='
+
+20
+
+i am not integer 21 nor string '21' '!=' 
+i am not integer 21  '!=='
+
+'20'
+i am not integer 21 nor string '21' '!=' 
+i am not integer 21  '!=='
+
+
+to see if variable  is defined or not
+if (typeof vari !== 'undefined'){
+     console.log('Vari is defined');
+ }
+
+ else{
+     console.log('Vari is not defined');
+ }
+
+JavaScript if else shortcut: ternary operator:-
+JavaScript provides a ternary operator that can be used as a shorthand of the if-else statement. Following is the syntax of the ternary operator.
+
+Condition? expression1: expression2
+If the condition evaluates to be true, the operator returns the value of the expression1. And if the condition evaluates to be false, it returns the value of the expression2.
+
+Example:-
+
+5>0? "Greater" : "Smaller";
+
+ The switch performs different actions based on different conditions. The switch statement is often used with a break .. 
+
+The break keyword in JavaScript is used to breaks out of the switch block. This keyword will stop the execution of the block.
+
+Note: If we do not use the break statement, the next case will be executed even if the evaluation does not match the case.
+
+
+For in
+The for… in Loop:-
+It is a special type of loop, used when we want to iterates over the properties of an object or the elements of an array. The syntax for using the for-in loop is:
+
+for(variable in object) {
+  // Code to be executed
+ }
+The loop counter, i.e., variable in the for-in loop, is a string, not a number. It contains the name of the current property or the index of the current array element.
+
+The following example will show how to loop through all the properties of a JavaScript object.
+let obj = {
+    name: "Rohan Das",
+     age: 78,
+     type: "Dangerous Programmer",
+     os: "Ubuntu"
+ }
+ for(let key in obj){
+     console.log(`The ${key} of object is ${obj[key]}`)
+}
+
+
+The forEach Loop:-
+In JavaScript, the  forEach is a type of loop that is used for Array method. With the help of forEach loop, we can execute a function on each item within an array. The function can only be used on Arrays, Sets, and Maps.
+
+arr.forEach(function(element, index, array){
+    console.log(element, index, array);
+});
+
+While loop
+If the expression evaluates to true, the code inside the while loop is executed. Every time the expression is re-evaluated, the process continues until the expression evaluates to false. When the expression evaluates to false, the loop stops.
+
+The syntax of the while loop is:
+
+while (expression) {
+  // body of loop
+}
+For Example:-
+
+let i = 1, n = 100;
+while (i <= n) {
+    console.log(i);
+    i += 1;
+}
+ do...while loop:-
+In this loop, the body inside the do statement is executed first. Then the condition is evaluated. If the condition evaluates to true, the body of the loop inside the do statement is executed again. This process continues until the condition evaluates to false. Then the loop stops.
+
+The syntax of do...while loop is:
+
+do {
+    // body of loop
+} while(condition)
+For Example:-
+
+let i = 1;
+let n =100;
+do {
+    console.log(i);
+    i++;
+} while(i <= n);
