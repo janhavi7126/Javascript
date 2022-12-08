@@ -1,0 +1,90 @@
+DOM
+document object model->widow part ()
+
+window is object/variable which is GLOBAL
+therfore we can use their functions 
+window.alert('');
+or 
+alert(''); no need to write windo
+
+let a =prompt('') -> takes in input
+
+confirm("Are you sure')
+ok returns true
+cancel returns false
+
+console.log(window.document);
+document
+<head></head
+<body>...
+will get print on console
+
+window.innerHeight;-> height of or
+innerHeight
+innerWidth
+scrollX -> 0 How much scrolled to X
+scrollY -> 0 How much scrolled to Y
+
+
+
+location.reload
+location.href; ->returns the link of that website
+location.href('//facebook.com')
+goes to that
+
+location.toString()
+
+window.history
+<-    -> (back button and front button on left side of browser)
+history.length;->4
+history.go(-1)
+
+goes back
+
+window.document;
+type of document // object -> reference data type
+dom has tree structure -> parent child relation
+
+document .all -> all tags of html with index (its like array but not array)
+document.body
+document.form[0]
+document.form[1]
+document.form[2]
+
+since it is not an array
+let a = document.all
+
+will not work
+a.forEach(function(element){
+	console.log(element);
+	})
+so 
+Array.from(a)forEach(function(element){ -> using a make an array iterate 								over each element and 								print it
+	console.log(element);
+	})
+
+
+<a href ="//facebook.com" >go to fb</a> 
+
+document.links[0].href;
+
+get this -> //facebook.com
+
+exercise
+let a = document.scripts;
+let b = document.links;
+
+
+Array.from(b).forEach(function(elems){
+   
+    if (String(elems).includes("a")) {
+        console.log(elems);
+    }
+})
+
+
+
+
+
+
+
