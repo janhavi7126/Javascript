@@ -1,0 +1,17 @@
+1) Sytax 1
+
+let functionName = ()=>{
+	return "Good Morning";
+}
+
+Syntax 2: without return and paranthesis ---> valid for single line only
+
+let functionName = ()=> "Good Morning";
+
+Syntax 3: with one parameter 
+
+let functionName =  name => "Good Morning "+ name ;
+
+Syntax 4: with more than one parameter
+
+let functionName =  (firstname , lastname) => "Good Morning " +firstname+ " "+lastname;

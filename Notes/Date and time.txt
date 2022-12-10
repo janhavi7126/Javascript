@@ -1,0 +1,28 @@
+let today = new Date();
+typeof today -> Object
+
+let date = new Date('5-10-1 04:01:08');
+or " Jun  13  1976 " 
+that date will get printed
+dd/mm/yy "13/06/1977" -> invalid
+mm/dd/yyyy "06/13/1976"
+
+date.getDay();
+-> 0	 sun
+-> 1   mon
+....
+4 -> thu
+date.getDate();
+date.getMinutes();
+date.getSeconds();
+date.getHours();
+date.getTime() ->timestamps noofseconds since 1 jan 1970
+ 
+getMilliseconds();
+getMonth();->9 ->0-jan ,1-feb, 9-oct
+date.setDate(22);
+date.setMonth(1);-.fEB
+date.setFullYear(1922);
+setMinutes(1)
+setSceonds(2);
+setHours(2);
