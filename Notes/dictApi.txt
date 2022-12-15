@@ -1,0 +1,3 @@
+pretend touse a word api -> object
+
+print definitions from all results of that word on dom 

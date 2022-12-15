@@ -1,0 +1,93 @@
+[function inside function]
+any function who takes function as an input or parameter
+
+->anyArray.forEach(function(element){
+	
+	})
+->setTimeOut(function(){  },4000) it says this particular fuction must execute after 4000ms 
+
+function get(){
+	setTimeout(function() {
+	
+	},5000)
+}
+if we request something to server  (get )then if it will take 5sec
+ so the fuction or task which we will write inside setTimeOut will execute only after that
+
+
+let students = [
+    {name :"Sam",age:17},
+    {name :"Ram",age:22}
+]
+
+// function addStudent(student){
+//     setTimeout(function(){
+//         students.push(student);
+//         console.log('student have been enroll');
+//     },3000);
+
+// }
+
+
+function getStudent(){
+    setTimeout(function(){
+        let str="";
+        students.forEach(function(elems){
+            str+= `<li>${elems.name}</li>`;
+        });
+        let unorder = document.getElementById('uno');
+        unorder.innerHTML = str;
+        console.log('student have been fetched');
+    },1000)
+}
+
+let newStud = {name:"Hari",age:20};
+addStudent(newStud);
+getStudent();
+
+
+// student have been fetched
+// student have been enroll
+// getStudent();
+// undefined
+// student have been fetched
+
+// here comes callback
+
+
+
+
+
+function addStudent(student,callback){
+    setTimeout(function(){
+        students.push(student);
+        console.log('student have been enroll');
+        callback();
+    },3000);
+
+}
+
+///*** Now addStudent  when gets called it will make the callback funtion wait and will only call it after finishing its own task**//
+
+3sec then 1 sec 
+
+therefore  
+//student have been enroll
+//student have been fetched
+
+function getStudent(){
+    setTimeout(function(){
+        let str="";
+        students.forEach(function(elems){
+            str+= `<li>${elems.name}</li>`;
+        });
+        let unorder = document.getElementById('uno');
+        unorder.innerHTML = str;
+        console.log('student have been fetched');
+    },1000)
+}
+
+
+
+let newStud = {name:"Hari",age:20};
+addStudent(newStud,getStudent());

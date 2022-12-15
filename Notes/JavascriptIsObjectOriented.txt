@@ -1,0 +1,45 @@
+h ={key:'value'}
+h is object
+Object has methods,functions ,attributes
+to call methods of the object
+obj.method();
+
+Object literal for creating object
+
+let obj1 = {
+	name:"name of object",
+	size :size of object ,
+	someMethod: function(){
+		console.log("some method called");
+	}
+}
+obj1.someMethod();
+function takes no arguement
+function return nothing  (undefined);
+
+obj1.name;
+
+Constructor /(template) use for creating object
+
+create a function with argument
+Constructor*
+function someFunc(name1,height1){
+	this.name = name1;
+	this.height = height1;
+	this.method = function(){
+		console.log(`${this.name} is .......`);
+	}
+}
+
+let obj2 = new someFunc('potato',3);
+console.log(obj2);
+obj2.height; =>3 
+// not height1 as it does not exist;
+
+obj2.method();
+//potato is ........
+//undefined (return)
+
+
+
+
