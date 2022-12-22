@@ -1,0 +1,4 @@
+const go =[6,9,8,0,3]
+console.log(...g);
+// 6 9 8 0 3
+it breaks the array and print it as a string
