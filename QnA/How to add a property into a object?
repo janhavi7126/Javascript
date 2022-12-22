@@ -1,0 +1,19 @@
+
+const baseObject = {
+  firstName: "Joe",
+  lastName: "Doe",
+  age: 23,
+};
+// Adding a property called company to an object
+const addedPropertyObject = {
+  ...baseObject,
+  company: "Microsoft",
+};
+
+console.log(addedPropertyObject); 
+
+
+
+
+// Adding a property called company to an object
+baseObject.company = "Microsoft";
