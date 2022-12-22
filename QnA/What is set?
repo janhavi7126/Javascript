@@ -1,0 +1,10 @@
+Set in javascript stores unique value .
+1) initializing set 
+const mySet = new Set([2,true,'girl']);
+2) initializing empty set 
+const mySet = new Set()
+some methods 
+mySet.add(ele);
+myset.delete(ele);
+myset.size();
+myset.has(ele);
