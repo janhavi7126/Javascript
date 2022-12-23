@@ -1,0 +1,30 @@
+Map takes any type key and value 
+it is declared as
+const map = new Map(); -> empty map
+for adding use set method
+ex: map.set('{}','hii'} 
+it takes empty object empty function and all types
+
+Using for of
+
+for(let [key,value] of map){
+  console.log(key,value);
+}
+
+for(let key of map.keys()){
+  console.log(key);
+}
+same for map.values()
+
+Using for each
+map.forEach((value,key)=>{
+  
+})
+
+How to convert map to arrays of 2 
+let mapToArrays = Array.from(map);
+
+How to convert mapOfKeys to array
+let KeysToArrays = Array.from(map.keys());
+
+let ValuesToArrays = Array.from(map.values());
