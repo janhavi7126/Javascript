@@ -1,0 +1,13 @@
+let data = [1,6,2,8,0,3];
+
+const result = data.map((item)=>item* 100); // so this is one line arrow function no need of {} and return
+console.log(result)
+output : 100
+         600
+         .
+         .
+const result = data.forEach((item)=>item* 100); // so this is one line arrow function no need of {} and return
+console.log(result)
+output : undefined 
+
+As we can see forEach function even if we return something it will give undefined so it returns null or does not return any thing whereas  map returns the output 
