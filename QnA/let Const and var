@@ -1,0 +1,141 @@
+What is Scope ?
+It is a region where a defined variable exist and can be accessible beyond that it is not recognized
+2)There can be a block scope ,global scope or functional scope
+
+Global scope is if we are directly defining a variable
+var is accessible outsie the block 
+let and const are not accessible outside the block
+
+therefore let and const are block scope
+
+and var is functional scope 
+In ES6 var is not used
+
+1)
+var can be redeclared    var a;  var a
+var can be reassigned
+2)
+let cannot be redeclared 
+but  can redeclared in different scope      
+let can be reassigned 
+3)
+const cannot  be declared without assigning **
+const cannot be reassigned
+
+
+////////////////////////////////////////////////
+* if block is also the block scope
+1) 
+var is functional scope 
+
+i.e if var is defined any where inside the function still it is accessible 
+
+but let & const is only accessible if it is defined inside a block (let and const are block scope) also 
+
+function hello(){
+
+    {
+    var fogg = "I have fogg";
+    }
+
+    console.log(fogg);
+}
+
+hello();
+
+let name ="Arjun";
+
+if(true){
+	let name = "Karan";
+	console.log(name);
+}
+console.log(name);
+Same for const 
+//Karan
+//Arjun
+
+var name ="Arjun";
+
+if(true){
+	var name = "Karan";
+	console.log(name);
+}
+console.log(name);
+//Karan
+//Karan
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+What is Variable shadowing?
+
+function hello(){
+let name ="Arjun";
+
+if(true){
+	let name = "Karan";
+	console.log(name);
+} 
+console.log(name);
+}
+
+Karan
+Arjun
+
+
+
+/// Here we can over shadow var variable using let but 
+not let variable using var
+
+function hello(){
+let name ="Arjun";
+var sname ="Seth";
+
+if(true){
+	var name = "Karan";
+	let sname = "Kukreja" 
+	console.log(name);   ................error :name is already been declared
+	console.log(sname);  /// Kukreja
+} 
+console.log(name);
+console.log(sname);		///Seth
+}
+
+
+
+/////////////////////Hoisting////////////////////////////////
+
+Javascript  execution context
+1) Creation phase
+	i) Window object /global scope is created
+	ii)Stores all variables and function in this window object(set ups memory heap for storing variables)
+	iii)Initializes these variables  with undefined and then funtion is iniltialized with their definitions
+
+During creation Phase 
+JS moves the variable and function declaration at the top of the program (top of their scope)execution of code
+
+
+1)so even if functions is defined at the bottom and called before it will get executed smoothly 
+2)in case of variables they are delared and assigned as undefined so if try to acces the var variable before its declaration or assignment it will return undefined
+3)for let and const it works little differently if we try to (    in short does not gets assigned as undefined )access them before variable declaration or assignment then they will throw error even though they too moved to the top that is becoz they goes to temporary dead zone its a time between declaration and initialization for that it is undefined but as soon as if it does not get assigned and is accessed before that it produce error
+Example:
+
+console.log(a);
+console.log(a);
+var a = 3;
+let  b = 5;
+
+in this case 
+b = undefined first 
+then printed  --> undefined
+then a = 5
+
+in let case
+b = undefined (but this(hoisted) in temporary dead zone)
+but anyways b (let) will produce an error of 
+cannot access the count before initialization
+
+Temporal zone is the time between declaration and initialization of let and const variable
+
+
